@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@drawable/backgroundimg"
+    android:orientation="vertical"
+    tools:context=".AddPlayers">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/lavander_border"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nome dos Jogadores"
+                android:textAlignment="center"
+                android:textColor="@color/lavender"
+                android:textSize="36sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/playerOne"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/lavander_border"
+                android:drawableLeft="@drawable/ic_xicon"
+                android:drawablePadding="8dp"
+                android:hint="Jogador 1"
+                android:maxLines="1"
+                android:padding="8dp"
+                android:textColor="@color/lavender"
+                android:textStyle="italic" />
+
+            <EditText
+                android:id="@+id/playerTwo"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/lavander_border"
+                android:drawableLeft="@drawable/ic_oicon"
+                android:drawablePadding="8dp"
+                android:hint="Jogador 2"
+                android:maxLines="1"
+                android:padding="8dp"
+                android:textColor="@color/lavender"
+                android:textStyle="italic" />
+
+            <Button
+                android:id="@+id/startGameButton"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="30dp"
+                android:text="Iniciar"
+                android:textSize="18sp"
+                app:cornerRadius="10dp" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:itemIconSize="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_nav_menu" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
